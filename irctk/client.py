@@ -116,10 +116,10 @@ class Client:
                     .replace('\\', '|')
                     .replace('^', '~'))
         elif self.isupport.case_mapping == 'ascii':
-            lower = string.lower
+            lower = str.lower
         else:
             # Unknown case mapping
-            lower = string.lower
+            lower = str.lower
 
         return lower(lhs) == lower(rhs)
 
